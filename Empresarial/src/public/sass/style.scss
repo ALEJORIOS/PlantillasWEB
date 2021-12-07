@@ -1,0 +1,109 @@
+$font-color: #000;
+$main-font: 'Open Sans',
+sans-serif;
+$title-size: 5vw;
+$font-size: 1.1vw;
+$ux: 1vw;
+$uy: 1vh;
+$shadows: 0 0.2*$ux 0.2*$ux rgba(0, 0, 0, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    visibility: hidden;
+    background: linear-gradient(#ffffff, #d7e1ec);
+    #loader {
+        visibility: visible;
+        position: fixed;
+        margin: 42*$uy 42*$ux;
+        font-family: $main-font;
+        font-size: 3*$ux;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px 8px #000000;
+    }
+}
+
+.container {
+    display: flex;
+    height: fit-content;
+    min-height: 80*$uy;
+    padding: 2*$uy;
+}
+
+.tabs {
+    width: fit-content;
+}
+
+.content {
+    width: 90*$ux;
+    height: fit-content;
+    min-height: 60*$uy;
+    background: white;
+    color: $font-color;
+    font-family: $main-font;
+    font-size: $font-size;
+    line-height: 4*$uy;
+    border-radius: 0.4*$ux;
+    box-shadow: $shadows;
+    padding: 4*$ux;
+    .startC {
+        display: none;
+    }
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 80*$uy;
+    opacity: 0.5;
+    border-radius: 0.4*$ux;
+}
+
+.coverText {
+    position: absolute;
+    top: (100%/2)-(25%);
+    left: 10vw;
+    font-family: $main-font;
+    .title {
+        font-size: $title-size;
+        color: $font-color;
+        font-weight: 800;
+    }
+    .coverP {
+        font-size: $font-size;
+        width: 60*$ux;
+    }
+}
+
+.button {
+    display: flex;
+    width: 10*$ux;
+    height: 4*$ux;
+    border-radius: 0.4*$ux;
+    background-color: white;
+    margin: 2*$ux 1*$ux;
+    font-size: 1.2*$ux;
+    font-family: $main-font;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadows;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    display: flex;
+    font-family: $main-font;
+    font-size: $ux;
+    justify-content: space-around;
+    width: 99%;
+    height: 6*$uy;
+    background: #ffffff;
+    box-shadow: $shadows;
+    padding: 0.5*$ux;
+    align-items: center;
+}
