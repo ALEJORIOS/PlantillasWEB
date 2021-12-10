@@ -66,7 +66,7 @@ img {
 }
 .tabs_2 .button_2 {
   display: block;
-  width: 20vw;
+  width: 25vw;
   height: 20vw;
   margin: 5vw;
   line-height: 20vw;
@@ -93,6 +93,23 @@ img {
   overflow-y: hidden;
 }
 
+@-webkit-keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 769px) and (orientation: landscape) {
   body {
     visibility: hidden;
@@ -273,19 +290,102 @@ img {
     display: none;
   }
 }
-@-webkit-keyframes nav {
-  0% {
-    opacity: 0;
+@media (orientation: portrait) {
+  body {
+    visibility: hidden;
+    background: linear-gradient(#ffffff, #d7e1ec);
   }
-  100% {
-    opacity: 1;
+  body #loader {
+    visibility: visible;
+    position: fixed;
+    margin: 42vh 42vw;
+    font-family: "Open Sans", sans-serif;
+    font-size: 4vh;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.1);
   }
-}
-@keyframes nav {
-  0% {
-    opacity: 0;
+
+  .content {
+    width: 90vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 60vh;
+    background: white;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.2vh;
+    line-height: 4vh;
+    border-radius: 0.4vw;
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.1);
+    padding: 4vw;
   }
-  100% {
-    opacity: 1;
+  .content .startC {
+    display: none;
+  }
+
+  .coverText {
+    position: absolute;
+    top: 25%;
+    left: 10vw;
+    font-family: "Open Sans", sans-serif;
+  }
+  .coverText .title {
+    font-size: 5.8vh;
+    color: #000;
+    font-weight: 800;
+  }
+  .coverText .coverP {
+    font-size: 3vh;
+    line-height: 4vh;
+    width: 60vw;
+  }
+
+  .button {
+    display: flex;
+    width: 10vw;
+    height: 4vw;
+    border-radius: 0.4vw;
+    background-color: white;
+    margin: 2vw 1vw;
+    font-size: 3.2vh;
+    font-family: "Open Sans", sans-serif;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.1);
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6vh;
+    justify-content: space-around;
+    width: 99%;
+    height: 6vh;
+    background: #ffffff;
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.1);
+    padding: 0.5vw;
+    align-items: center;
+  }
+
+  .coverP {
+    visibility: hidden;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .nav {
+    padding: 1vh 0.5vh;
+  }
+
+  .tabs_2 .button_2 {
+    width: 80vw;
+    font-size: 3.3vh;
   }
 }/*# sourceMappingURL=style.css.map */

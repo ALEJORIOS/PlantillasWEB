@@ -144,7 +144,7 @@ img {
     top: 0;
     .button_2 {
         display: block;
-        width: 20vw;
+        width: 25vw;
         height: 20vw;
         margin: 5vw;
         line-height: 20vw;
@@ -170,6 +170,15 @@ img {
     overflow-y: hidden;
 }
 
+@keyframes nav {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (min-width: 769px) and (orientation: landscape) {
     @include text-size(4.9vw, 1vw, 1.4vw, 4vh, 0.8vw);
     .nav {
@@ -190,11 +199,21 @@ img {
     }
 }
 
-@keyframes nav {
-    0% {
-        opacity: 0;
+@media (orientation: portrait) {
+    @include text-size(5.8vh, 3vh, 4vh, 4vh, 1.6vh);
+    .coverP {
+        visibility: hidden;
     }
-    100% {
-        opacity: 1;
+    .tabs {
+        display: none;
+    }
+    .nav {
+        padding: 1vh 0.5vh;
+    }
+    .tabs_2 {
+        .button_2 {
+            width: 80vw;
+            font-size: 3.3vh;
+        }
     }
 }
