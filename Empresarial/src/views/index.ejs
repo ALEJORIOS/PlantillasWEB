@@ -13,11 +13,15 @@
     <link rel="stylesheet" href="../sass/style.css">
 </head>
 <div id="loader">
-    Cargando
+    Cargando...
 </div>
 
 <body>
-
+    <div class="nav" onclick="showNav()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
     <div class="container">
         <img src="../portada.jpg" alt="Businessman">
         <div class="coverText">
@@ -35,7 +39,7 @@
             <div class="button" onclick="seeClientes()">Clientes</div>
             <div class="button" onclick="seeContactenos()">Contáctenos</div>
         </div>
-        <div class="content">
+        <div class="content" id="content">
             <div id="startC">
                 <h2>Inicio</h2><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vitae facilis nihil, animi eum laboriosam pariatur sequi ipsum molestias voluptatum dicta dolorem illo, sunt magni? Minus quod vero adipisci nam! Magnam molestiae
                 placeat eligendi est unde laudantium similique harum, error ipsa enim eius non alias porro minima voluptatem ratione eveniet soluta sunt ut optio, libero quia quaerat explicabo veritatis! Laborum iste dolore perferendis voluptates rerum!
@@ -91,6 +95,13 @@
     </div>
 
 </body>
-<script src="../js/scripts.js"></script>
+<div class="tabs_2" id="navigation">
+    <div class="button_2" onclick="seeInicio()">Inicio</div>
+    <div class="button_2" onclick="seeServicios()">Servicios</div>
+    <div class="button_2" onclick="seeEstrategias()">Estrategias</div>
+    <div class="button_2" onclick="seeClientes()">Clientes</div>
+    <div class="button_2" onclick="seeContactenos()">Contáctenos</div>
+</div>
+<script src="../js/scripts.js "></script>
 
 </html>
